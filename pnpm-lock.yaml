@@ -11,6 +11,9 @@ dependencies:
   '@fastify/sensible':
     specifier: ^5.2.0
     version: registry.npmmirror.com/@fastify/sensible@5.2.0
+  '@prisma/client':
+    specifier: ^5.2.0
+    version: registry.npmmirror.com/@prisma/client@5.2.0(prisma@5.2.0)
   fastify:
     specifier: ^4.22.2
     version: registry.npmmirror.com/fastify@4.22.2
@@ -20,6 +23,9 @@ dependencies:
   fastify-plugin:
     specifier: ^4.5.1
     version: registry.npmmirror.com/fastify-plugin@4.5.1
+  prisma:
+    specifier: ^5.2.0
+    version: registry.npmmirror.com/prisma@5.2.0
 
 devDependencies:
   tap:
@@ -383,6 +389,36 @@ packages:
       '@jridgewell/resolve-uri': registry.npmmirror.com/@jridgewell/resolve-uri@3.1.1
       '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec@1.4.15
     dev: true
+
+  registry.npmmirror.com/@prisma/client@5.2.0(prisma@5.2.0):
+    resolution: {integrity: sha512-AiTjJwR4J5Rh6Z/9ZKrBBLel3/5DzUNntMohOy7yObVnVoTNVFi2kvpLZlFuKO50d7yDspOtW6XBpiAd0BVXbQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@prisma/client/-/client-5.2.0.tgz}
+    id: registry.npmmirror.com/@prisma/client/5.2.0
+    name: '@prisma/client'
+    version: 5.2.0
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': registry.npmmirror.com/@prisma/engines-version@5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f
+      prisma: registry.npmmirror.com/prisma@5.2.0
+    dev: false
+
+  registry.npmmirror.com/@prisma/engines-version@5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f:
+    resolution: {integrity: sha512-jsnKT5JIDIE01lAeCj2ghY9IwxkedhKNvxQeoyLs6dr4ZXynetD0vTy7u6wMJt8vVPv8I5DPy/I4CFaoXAgbtg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@prisma/engines-version/-/engines-version-5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f.tgz}
+    name: '@prisma/engines-version'
+    version: 5.2.0-25.2804dc98259d2ea960602aca6b8e7fdc03c1758f
+    dev: false
+
+  registry.npmmirror.com/@prisma/engines@5.2.0:
+    resolution: {integrity: sha512-dT7FOLUCdZmq+AunLqB1Iz+ZH/IIS1Fz2THmKZQ6aFONrQD/BQ5ecJ7g2wGS2OgyUFf4OaLam6/bxmgdOBDqig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@prisma/engines/-/engines-5.2.0.tgz}
+    name: '@prisma/engines'
+    version: 5.2.0
+    requiresBuild: true
+    dev: false
 
   registry.npmmirror.com/abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/abort-controller/-/abort-controller-3.0.0.tgz}
@@ -1949,6 +1985,17 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: registry.npmmirror.com/find-up@3.0.0
+    dev: false
+
+  registry.npmmirror.com/prisma@5.2.0:
+    resolution: {integrity: sha512-FfFlpjVCkZwrqxDnP4smlNYSH1so+CbfjgdpioFzGGqlQAEm6VHAYSzV7jJgC3ebtY9dNOhDMS2+4/1DDSM7bQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/prisma/-/prisma-5.2.0.tgz}
+    name: prisma
+    version: 5.2.0
+    engines: {node: '>=16.13'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': registry.npmmirror.com/@prisma/engines@5.2.0
     dev: false
 
   registry.npmmirror.com/process-on-spawn@1.0.0:
