@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@faker-js/faker':
+    specifier: ^8.0.2
+    version: registry.npmmirror.com/@faker-js/faker@8.0.2
   '@fastify/autoload':
     specifier: ^5.7.1
     version: registry.npmmirror.com/@fastify/autoload@5.7.1
@@ -23,6 +26,9 @@ dependencies:
   fastify-plugin:
     specifier: ^4.5.1
     version: registry.npmmirror.com/fastify-plugin@4.5.1
+  mockjs:
+    specifier: ^1.1.0
+    version: registry.npmmirror.com/mockjs@1.1.0
   prisma:
     specifier: ^5.2.0
     version: registry.npmmirror.com/prisma@5.2.0
@@ -277,6 +283,13 @@ packages:
       '@babel/helper-validator-identifier': registry.npmmirror.com/@babel/helper-validator-identifier@7.22.5
       to-fast-properties: registry.npmmirror.com/to-fast-properties@2.0.0
     dev: true
+
+  registry.npmmirror.com/@faker-js/faker@8.0.2:
+    resolution: {integrity: sha512-Uo3pGspElQW91PCvKSIAXoEgAUlRnH29sX2/p89kg7sP1m2PzCufHINd0FhTXQf6DYGiUlVncdSPa2F9wxed2A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@faker-js/faker/-/faker-8.0.2.tgz}
+    name: '@faker-js/faker'
+    version: 8.0.2
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
+    dev: false
 
   registry.npmmirror.com/@fastify/ajv-compiler@3.5.0:
     resolution: {integrity: sha512-ebbEtlI7dxXF5ziNdr05mOY8NnDiPB1XvAlLHctRt/Rc+C3LCOVW5imUVX+mhvUhnNzmPBHewUkOFgGlCxgdAA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@fastify/ajv-compiler/-/ajv-compiler-3.5.0.tgz}
@@ -761,6 +774,13 @@ packages:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/colorette/-/colorette-2.0.20.tgz}
     name: colorette
     version: 2.0.20
+    dev: false
+
+  registry.npmmirror.com/commander@11.0.0:
+    resolution: {integrity: sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/commander/-/commander-11.0.0.tgz}
+    name: commander
+    version: 11.0.0
+    engines: {node: '>=16'}
     dev: false
 
   registry.npmmirror.com/commist@3.2.0:
@@ -1715,6 +1735,15 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dev: true
+
+  registry.npmmirror.com/mockjs@1.1.0:
+    resolution: {integrity: sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mockjs/-/mockjs-1.1.0.tgz}
+    name: mockjs
+    version: 1.1.0
+    hasBin: true
+    dependencies:
+      commander: registry.npmmirror.com/commander@11.0.0
+    dev: false
 
   registry.npmmirror.com/ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz}

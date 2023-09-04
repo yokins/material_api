@@ -11,7 +11,7 @@
 
 const routes = async function (fastify, opts) {
     fastify.get("/", async function (request, reply) {
-        return { root: true };
+        return fastify.prisma.company_groups.findMany();
     });
 };
 

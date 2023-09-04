@@ -10,3 +10,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model company_groups {
+  id         Int         @id @default(autoincrement())
+  name       String
+  logo       String?
+  address    String?
+  companies  companies[]
+  created_at DateTime    @default(now())
+  updated_at DateTime    @default(now()) @updatedAt
+  deleted_at DateTime?
+}
+
+model companies {
+  id               Int             @id @default(autoincrement())
+  name             String
+  logo             String?
+  address          String?
+  created_at       DateTime        @default(now())
+  updated_at       DateTime        @default(now()) @updatedAt
+  deleted_at       DateTime?
+  company_groups   company_groups? @relation(fields: [company_groupsId], references: [id])
+  company_groupsId Int?
+}
