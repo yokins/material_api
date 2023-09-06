@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,10 +12,10 @@ model company_groups {
   name       String
   logo       String?
   address    String?
-  companies  companies[]
+  deleted_at DateTime?
   created_at DateTime    @default(now())
   updated_at DateTime    @default(now()) @updatedAt
-  deleted_at DateTime?
+  companies  companies[]
 }
 
 model companies {
@@ -29,6 +26,32 @@ model companies {
   created_at       DateTime        @default(now())
   updated_at       DateTime        @default(now()) @updatedAt
   deleted_at       DateTime?
-  company_groups   company_groups? @relation(fields: [company_groupsId], references: [id])
   company_groupsId Int?
+  company_groups   company_groups? @relation(fields: [company_groupsId], references: [id])
+  staffs           staffs[]
+
+  @@index([company_groupsId], map: "companies_company_groupsId_fkey")
+}
+
+model users {
+  id         Int       @id @default(autoincrement())
+  name       String
+  created_at DateTime  @default(now())
+  updated_at DateTime  @default(now()) @updatedAt
+  deleted_at DateTime?
+  staffs     staffs[]
+}
+
+model staffs {
+  id          Int        @id @default(autoincrement())
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @default(now()) @updatedAt
+  deleted_at  DateTime?
+  companiesId Int?
+  usersId     Int?
+  companies   companies? @relation(fields: [companiesId], references: [id])
+  users       users?     @relation(fields: [usersId], references: [id])
+
+  @@index([companiesId], map: "staffs_companiesId_fkey")
+  @@index([usersId], map: "staffs_usersId_fkey")
 }
